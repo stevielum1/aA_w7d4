@@ -5,7 +5,8 @@ import PokemonDetail from './pokemon_detail';
 import {selectPokemon} from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => ({
-  pokemon: selectPokemon(state, ownProps.match.params.pokemonId)
+  pokemon: selectPokemon(state, ownProps.match.params.pokemonId),
+  items: state.entities.items
 });
 
 const mapDispatchToProps = (dispatch) => ({
